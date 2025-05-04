@@ -32,23 +32,19 @@ Built a scalable **text classification model** using **Spark NLP**, **PySpark ML
 
 This architecture shows how the solution could scale in a real-world environment using GCP services:
 
-![GCP Architecture](assets/gcp_architecture.png)
-
-> Save the image as `assets/gcp_architecture.png` inside a folder named `assets` in your GitHub repository.
+<img src="assets/gcp_architecture.png" alt="GCP Architecture" width="500"/>
 
 ---
 
 ## 📁 Repository Structure
+<pre lang="markdown"> 
+``` 📦 Classifying-News-Articles-with-Spark-NLP 
+┣ 📓 Spark NLP & ML for Text Classification.ipynb 
+┣ 📜 README.md 
+┗ 📁 assets 
+┗ 🖼️ gcp_architecture.png ``` 
+</pre>
 
-📦 Classifying-News-Articles-with-Spark-NLP
-┣ 📓 Spark NLP & ML for Text Classification.ipynb
-┣ 📜 README.md
-┗ 📁 assets
-┗ 🖼️ gcp_architecture.png
-
-yaml
-Copy
-Edit
 
 ---
 
@@ -67,31 +63,34 @@ git clone https://github.com/Bhaskar-scientist/Classifying-News-Articles-with-Sp
 cd Classifying-News-Articles-with-Spark-NLP
 ```
 2. Install Dependencies
-
+```
 pip install pyspark spark-nlp pandas
-
-4. Launch Jupyter Notebook
-
+```
+3. Launch Jupyter Notebook
+```
 jupyter notebook
-
+```
 Then open and run:
+
+`
 📓 Spark NLP & ML for Text Classification.ipynb
+`
 
 🔍 Future Improvements
-Deploy the classifier using Streamlit or Flask
+* Deploy the classifier using Streamlit or Flask
 
-Add a REST API for real-time predictions
+* Add a REST API for real-time predictions
 
-Experiment with more advanced models (e.g., BERT with Spark NLP)
+* Experiment with more advanced models (e.g., BERT with Spark NLP)
 
-Visualize word distributions and model confusion matrices
+* Visualize word distributions and model confusion matrices
 
-Integrate with Google Cloud Storage & Vertex AI
+* Integrate with Google Cloud Storage & Vertex AI
 
-👨‍💻 Author
-Bhaskar Reddy
+## 👨‍💻 Author
+### Bhaskar Reddy
 Data Scientist | NLP & ML Enthusiast
-🌐 ![LinkedIn]([assets/gcp_architecture.png](https://www.linkedin.com/in/bhaskar-reddy-challapureddy/)
+🌐 [LinkedIn](https://www.linkedin.com/in/bhaskar-reddy-challapureddy/)
 
 ⭐️ If you found this useful...
 Feel free to star the repository and share it with others working in NLP or PySpark!
