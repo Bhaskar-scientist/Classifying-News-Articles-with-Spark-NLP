@@ -1,110 +1,97 @@
-# Classifying-News-Articles-with-Spark-NLP
-📰 Classifying News Articles with Spark NLP
-Built a scalable text classification model using Spark NLP, PySpark ML, and John Snow Labs' pre-trained models. The project processes and classifies 2,225 BBC News articles into five categories: business, entertainment, politics, sport, and tech.
+# 📰 Classifying News Articles with Spark NLP
 
-📌 Project Highlights
-📄 Dataset: 2,225 labeled BBC news articles
+Built a scalable **text classification model** using **Spark NLP**, **PySpark ML**, and **John Snow Labs' pre-trained models**. The project processes and classifies **2,225 BBC News articles** into **five categories**: `business`, `entertainment`, `politics`, `sport`, and `tech`.
 
-🧠 Goal: Accurately classify each article into one of the five categories
+---
 
-⚙️ Tech Stack: PySpark, Spark NLP, Spark MLlib, Pandas, John Snow Labs NLP models
+## 📌 Project Highlights
 
-🛠 Pipeline Includes:
+* 📄 **Dataset**: 2,225 labeled BBC news articles  
+* 🧠 **Goal**: Accurately classify each article into one of the five categories  
+* ⚙️ **Tech Stack**: PySpark, Spark NLP, Spark MLlib, Pandas, John Snow Labs NLP models, Google Cloud Platform (GCP)  
+* 🛠 **Pipeline Includes**:
+  * Data ingestion and cleaning
+  * Text preprocessing (tokenization, lemmatization, stopwords removal, etc.)
+  * Feature extraction (TF-IDF, CountVectorizer)
+  * Model training using Spark ML algorithms
+  * Evaluation using accuracy, F1-score, and precision/recall
 
-Data ingestion and cleaning
+---
 
-Text preprocessing (tokenization, lemmatization, stopwords removal)
+## 🧪 Tools & Libraries Used
 
-Feature extraction (TF-IDF, CountVectorizer)
+* **Apache Spark & PySpark**: Distributed data processing  
+* **Spark NLP (John Snow Labs)**: High-performance NLP on Spark  
+* **Spark MLlib**: Scalable machine learning pipelines  
+* **Google Cloud Platform (GCP)**: Cloud-native architecture suggestion  
+* **Jupyter Notebook**: Interactive development environment
 
-Model training using Spark ML algorithms
+---
 
-Evaluation using accuracy, F1-score, and precision/recall
+## 🌐 Suggested GCP Architecture
 
-☁️ Scalable GCP-Based Architecture (Suggested for Production)
-While the current implementation runs locally, the project is designed to be production-ready and can be deployed using the following Google Cloud Platform architecture:
+This architecture shows how the solution could scale in a real-world environment using GCP services:
 
-pgsql
-Copy
-Edit
-              +-----------------------------+
-              |   Google Cloud Storage (GCS)|
-              |   (Raw Data Input)          |
-              +-------------+---------------+
-                            |
-                            v
-           +-------------------------------+
-           |  Dataproc Cluster (PySpark Job)|
-           |  - Spark NLP Pipeline          |
-           |  - Model Training & Inference  |
-           +-------------------------------+
-                            |
-                            v
-              +-----------------------------+
-              |  BigQuery (Model Outputs)   |
-              +-----------------------------+
-                            |
-                            v
-            +--------------------------------+
-            |  Streamlit / Flask Web App     |
-            |  (For real-time predictions)   |
-            +--------------------------------+
-⚙️ Future enhancement: Export the trained model and deploy it as a Cloud Function or REST API with real-time input and output handling.
+![GCP Architecture](assets/gcp_architecture.png)
 
-🧪 Tools & Libraries Used
-Apache Spark & PySpark – Distributed processing
+> Save the image as `assets/gcp_architecture.png` inside a folder named `assets` in your GitHub repository.
 
-Spark NLP (John Snow Labs) – Efficient NLP on Spark
+---
 
-Spark MLlib – Machine learning on large datasets
+## 📁 Repository Structure
 
-Jupyter Notebook – Interactive development
-
-📁 Repository Structure
-vbnet
-Copy
-Edit
 📦 Classifying-News-Articles-with-Spark-NLP
- ┣ 📓 Spark NLP & ML for Text Classification.ipynb
- ┣ 📜 README.md
-📈 Results
-The trained model demonstrated robust accuracy across all five news categories. PySpark's distributed architecture and Spark NLP's optimized components ensured efficient handling of structured and unstructured text data at scale.
+┣ 📓 Spark NLP & ML for Text Classification.ipynb
+┣ 📜 README.md
+┗ 📁 assets
+┗ 🖼️ gcp_architecture.png
 
-🚀 Getting Started
-1. Clone the Repo
-bash
+yaml
 Copy
 Edit
+
+---
+
+## 📈 Results
+
+The trained models were able to achieve strong classification accuracy on the BBC News dataset. Spark NLP's integration with Spark ML pipelines enabled fast and efficient processing of text at scale.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repo
+
+``` 
 git clone https://github.com/Bhaskar-scientist/Classifying-News-Articles-with-Spark-NLP.git
 cd Classifying-News-Articles-with-Spark-NLP
+```
 2. Install Dependencies
-bash
-Copy
-Edit
+
 pip install pyspark spark-nlp pandas
-3. Launch Jupyter Notebook
-bash
-Copy
-Edit
+
+4. Launch Jupyter Notebook
+
 jupyter notebook
-Open and run:
+
+Then open and run:
 📓 Spark NLP & ML for Text Classification.ipynb
 
-🔮 Future Improvements
-Deploy classifier via Streamlit or Flask UI
+🔍 Future Improvements
+Deploy the classifier using Streamlit or Flask
 
-Integrate the pipeline with Google Cloud Platform
+Add a REST API for real-time predictions
 
-Serve predictions via REST API (e.g., FastAPI + Cloud Run)
+Experiment with more advanced models (e.g., BERT with Spark NLP)
 
-Visualize key insights: class distribution, confusion matrix, keyword clouds
+Visualize word distributions and model confusion matrices
 
-Experiment with transformer-based models (e.g., BERT) using Spark NLP
+Integrate with Google Cloud Storage & Vertex AI
 
 👨‍💻 Author
 Bhaskar Reddy
 Data Scientist | NLP & ML Enthusiast
-🔗 LinkedIn | 🛠 Portfolio (Coming soon)
+🌐 ![LinkedIn]([assets/gcp_architecture.png](https://www.linkedin.com/in/bhaskar-reddy-challapureddy/)
 
-⭐️ If you found this helpful...
-Give the repository a star ⭐️, fork it, or share with fellow developers working on NLP, PySpark, or cloud-native data engineering!
+⭐️ If you found this useful...
+Feel free to star the repository and share it with others working in NLP or PySpark!
